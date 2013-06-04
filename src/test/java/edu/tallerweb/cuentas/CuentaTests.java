@@ -28,5 +28,25 @@ public class CuentaTests {
 
 		cuenta.extraer(4000.0);
 	}
-
+	
+	@Test
+	public void queDepositeMonto() {
+		CuentaSueldo deposito = new CuentaSueldo();
+		deposito.depositar(1200);
+	}
+	
+	@Test
+	public void queMeDigaCuantoTengoEnLaCuenta() {
+		CuentaSueldo Saldo = new CuentaSueldo();
+		Saldo.getSaldo();
+	}
+	
+	@Test
+	public void queMePermitaExtraerDinero() {
+		CuentaSueldo ExtraerDinero = new CuentaSueldo();
+		ExtraerDinero.depositar(1200);
+		ExtraerDinero.extraer(200);
+	}
 }
+
+
